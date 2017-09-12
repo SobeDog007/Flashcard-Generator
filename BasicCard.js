@@ -5,8 +5,17 @@
 
 // Constructor:
 function BasicCard(front, back) {
-	this.front = front;
-	this.back  = back;
+
+	if (this instanceof BasicCard) 
+	{
+		this.front = front;
+		this.back  = back;
+	}
+
+	else
+	{
+		return new BasicCard(front, back);
+	}
 }
 
 module.exports = BasicCard;
@@ -15,10 +24,10 @@ module.exports = BasicCard;
 // Test Execution
 // ***************************************************************************
 
-// Create a card.
-var firstPresident = new BasicCard("Who was the first president of the United States?",
-								   		  "George Washington");
+// // Create a card.
+// var firstPresident = new BasicCard("Who was the first president of the United States?",
+//   							   		     "George Washington");
 
-// Log the card properties.
-console.log("Front: " + firstPresident.front);
-console.log("Back : " + firstPresident.back);
+// // Log the card properties.
+// console.log("Front: " + firstPresident.front);
+// console.log("Back : " + firstPresident.back);
