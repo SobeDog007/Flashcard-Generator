@@ -15,7 +15,7 @@ var firstPresident = new BasicCard("Who was the first president of the United St
 console.log("Front: " + firstPresident.front);
 console.log("Back : " + firstPresident.back);
 
-var firstPresidentCloze = new CloseCard("George Washington was the first president of the United States.",
+var firstPresidentCloze = new ClozeCard("George Washington was the first president of the United States.",
 													 "George Washington");
 
 // Log the card properties.
